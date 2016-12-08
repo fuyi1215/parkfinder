@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="yf2_1583911Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Beaches">
+          <Key>
+            <PropertyRef Name="Bid" />
+          </Key>
+          <Property Name="id" Type="int" />
+          <Property Name="name" Type="nvarchar" MaxLength="255" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="255" />
+          <Property Name="County" Type="nvarchar" MaxLength="255" />
+          <Property Name="EntranceFee" Type="float" />
+          <Property Name="PermitRequired" Type="float" />
+          <Property Name="UnitDescription" Type="nvarchar" MaxLength="255" />
+          <Property Name="TotalNumofSites" Type="float" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Location" Type="nvarchar" MaxLength="255" />
+          <Property Name="Bid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Parks">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="Park_Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="Park_Type" Type="nvarchar" MaxLength="255" />
+          <Property Name="Zip_Code" Type="float" />
+          <Property Name="Aqua_Feat__Pool" Type="float" />
+          <Property Name="Aqua_Feat__Spray" Type="nvarchar" MaxLength="255" />
+          <Property Name="Backstop__Practice" Type="nvarchar" MaxLength="255" />
+          <Property Name="Ballfield" Type="float" />
+          <Property Name="Basketball" Type="float" />
+          <Property Name="Blueway" Type="nvarchar" MaxLength="255" />
+          <Property Name="Complex__Ballfield" Type="nvarchar" MaxLength="255" />
+          <Property Name="Complex__Tennis" Type="nvarchar" MaxLength="255" />
+          <Property Name="Concessions" Type="nvarchar" MaxLength="255" />
+          <Property Name="Disk_Golf" Type="nvarchar" MaxLength="255" />
+          <Property Name="Driving_Range" Type="nvarchar" MaxLength="255" />
+          <Property Name="Educational_Experience" Type="float" />
+          <Property Name="Event_Space" Type="float" />
+          <Property Name="Fitness_Course" Type="nvarchar" MaxLength="255" />
+          <Property Name="Garden__Community" Type="float" />
+          <Property Name="Garden__Display" Type="float" />
+          <Property Name="Golf" Type="nvarchar" MaxLength="255" />
+          <Property Name="Hockey__Ice" Type="nvarchar" MaxLength="255" />
+          <Property Name="Loop_Walk" Type="float" />
+          <Property Name="MP_Field__Large" Type="float" />
+          <Property Name="MP_Field__Multiple" Type="nvarchar" MaxLength="255" />
+          <Property Name="MP_Field__Small" Type="nvarchar" MaxLength="255" />
+          <Property Name="Multiuse_Court" Type="nvarchar" MaxLength="255" />
+          <Property Name="Natural_Area" Type="nvarchar" MaxLength="255" />
+          <Property Name="Open_Turf" Type="float" />
+          <Property Name="Open_Water" Type="float" />
+          <Property Name="Other___Active" Type="nvarchar" MaxLength="255" />
+          <Property Name="Other_Passive" Type="nvarchar" MaxLength="255" />
+          <Property Name="Passive_Node" Type="float" />
+          <Property Name="Picnic_Grounds" Type="float" />
+          <Property Name="Playground__Destination" Type="float" />
+          <Property Name="Playground__Local" Type="float" />
+          <Property Name="Public_Art" Type="float" />
+          <Property Name="Shelter" Type="nvarchar" MaxLength="255" />
+          <Property Name="Shelter__Group" Type="float" />
+          <Property Name="Skate_Park" Type="nvarchar" MaxLength="255" />
+          <Property Name="Sledding_Hill" Type="nvarchar" MaxLength="255" />
+          <Property Name="Structure" Type="float" />
+          <Property Name="Tennis" Type="nvarchar" MaxLength="255" />
+          <Property Name="Trail__Primitive" Type="nvarchar" MaxLength="255" />
+          <Property Name="Volleyball" Type="nvarchar" MaxLength="255" />
+          <Property Name="Water_Access__Developed" Type="float" />
+          <Property Name="Water_Access__General" Type="float" />
+          <Property Name="Water_Feature" Type="float" />
+          <Property Name="Location_1" Type="nvarchar" MaxLength="300" />
+          <Property Name="FID" Type="int" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="yf2_1583911ModelStoreContainer">
+          <EntitySet Name="Beaches" EntityType="Self.Beaches" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Parks" EntityType="Self.Parks" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="yf2_1583911Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Beach">
+          <Key>
+            <PropertyRef Name="Bid" />
+          </Key>
+          <Property Name="id" Type="Int32" />
+          <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="County" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="EntranceFee" Type="Double" />
+          <Property Name="PermitRequired" Type="Double" />
+          <Property Name="UnitDescription" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TotalNumofSites" Type="Double" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Location" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Bid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="Park">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="Park_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Park_Type" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Zip_Code" Type="Double" />
+          <Property Name="Aqua_Feat__Pool" Type="Double" />
+          <Property Name="Aqua_Feat__Spray" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Backstop__Practice" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Ballfield" Type="Double" />
+          <Property Name="Basketball" Type="Double" />
+          <Property Name="Blueway" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Complex__Ballfield" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Complex__Tennis" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Concessions" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Disk_Golf" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Driving_Range" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Educational_Experience" Type="Double" />
+          <Property Name="Event_Space" Type="Double" />
+          <Property Name="Fitness_Course" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Garden__Community" Type="Double" />
+          <Property Name="Garden__Display" Type="Double" />
+          <Property Name="Golf" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Hockey__Ice" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Loop_Walk" Type="Double" />
+          <Property Name="MP_Field__Large" Type="Double" />
+          <Property Name="MP_Field__Multiple" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="MP_Field__Small" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Multiuse_Court" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Natural_Area" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Open_Turf" Type="Double" />
+          <Property Name="Open_Water" Type="Double" />
+          <Property Name="Other___Active" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Other_Passive" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Passive_Node" Type="Double" />
+          <Property Name="Picnic_Grounds" Type="Double" />
+          <Property Name="Playground__Destination" Type="Double" />
+          <Property Name="Playground__Local" Type="Double" />
+          <Property Name="Public_Art" Type="Double" />
+          <Property Name="Shelter" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Shelter__Group" Type="Double" />
+          <Property Name="Skate_Park" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Sledding_Hill" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Structure" Type="Double" />
+          <Property Name="Tennis" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Trail__Primitive" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Volleyball" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Water_Access__Developed" Type="Double" />
+          <Property Name="Water_Access__General" Type="Double" />
+          <Property Name="Water_Feature" Type="Double" />
+          <Property Name="Location_1" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="FID" Type="Int32" />
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityContainer Name="yf2_1583911Entities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Beaches" EntityType="Self.Beach" />
+          <EntitySet Name="Parks" EntityType="Self.Park" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="yf2_1583911ModelStoreContainer" CdmEntityContainer="yf2_1583911Entities1">
+          <EntitySetMapping Name="Beaches">
+            <EntityTypeMapping TypeName="yf2_1583911Model.Beach">
+              <MappingFragment StoreEntitySet="Beaches">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="County" ColumnName="County" />
+                <ScalarProperty Name="EntranceFee" ColumnName="EntranceFee" />
+                <ScalarProperty Name="PermitRequired" ColumnName="PermitRequired" />
+                <ScalarProperty Name="UnitDescription" ColumnName="UnitDescription" />
+                <ScalarProperty Name="TotalNumofSites" ColumnName="TotalNumofSites" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="Bid" ColumnName="Bid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Parks">
+            <EntityTypeMapping TypeName="yf2_1583911Model.Park">
+              <MappingFragment StoreEntitySet="Parks">
+                <ScalarProperty Name="Park_Name" ColumnName="Park_Name" />
+                <ScalarProperty Name="Park_Type" ColumnName="Park_Type" />
+                <ScalarProperty Name="Zip_Code" ColumnName="Zip_Code" />
+                <ScalarProperty Name="Aqua_Feat__Pool" ColumnName="Aqua_Feat__Pool" />
+                <ScalarProperty Name="Aqua_Feat__Spray" ColumnName="Aqua_Feat__Spray" />
+                <ScalarProperty Name="Backstop__Practice" ColumnName="Backstop__Practice" />
+                <ScalarProperty Name="Ballfield" ColumnName="Ballfield" />
+                <ScalarProperty Name="Basketball" ColumnName="Basketball" />
+                <ScalarProperty Name="Blueway" ColumnName="Blueway" />
+                <ScalarProperty Name="Complex__Ballfield" ColumnName="Complex__Ballfield" />
+                <ScalarProperty Name="Complex__Tennis" ColumnName="Complex__Tennis" />
+                <ScalarProperty Name="Concessions" ColumnName="Concessions" />
+                <ScalarProperty Name="Disk_Golf" ColumnName="Disk_Golf" />
+                <ScalarProperty Name="Driving_Range" ColumnName="Driving_Range" />
+                <ScalarProperty Name="Educational_Experience" ColumnName="Educational_Experience" />
+                <ScalarProperty Name="Event_Space" ColumnName="Event_Space" />
+                <ScalarProperty Name="Fitness_Course" ColumnName="Fitness_Course" />
+                <ScalarProperty Name="Garden__Community" ColumnName="Garden__Community" />
+                <ScalarProperty Name="Garden__Display" ColumnName="Garden__Display" />
+                <ScalarProperty Name="Golf" ColumnName="Golf" />
+                <ScalarProperty Name="Hockey__Ice" ColumnName="Hockey__Ice" />
+                <ScalarProperty Name="Loop_Walk" ColumnName="Loop_Walk" />
+                <ScalarProperty Name="MP_Field__Large" ColumnName="MP_Field__Large" />
+                <ScalarProperty Name="MP_Field__Multiple" ColumnName="MP_Field__Multiple" />
+                <ScalarProperty Name="MP_Field__Small" ColumnName="MP_Field__Small" />
+                <ScalarProperty Name="Multiuse_Court" ColumnName="Multiuse_Court" />
+                <ScalarProperty Name="Natural_Area" ColumnName="Natural_Area" />
+                <ScalarProperty Name="Open_Turf" ColumnName="Open_Turf" />
+                <ScalarProperty Name="Open_Water" ColumnName="Open_Water" />
+                <ScalarProperty Name="Other___Active" ColumnName="Other___Active" />
+                <ScalarProperty Name="Other_Passive" ColumnName="Other_Passive" />
+                <ScalarProperty Name="Passive_Node" ColumnName="Passive_Node" />
+                <ScalarProperty Name="Picnic_Grounds" ColumnName="Picnic_Grounds" />
+                <ScalarProperty Name="Playground__Destination" ColumnName="Playground__Destination" />
+                <ScalarProperty Name="Playground__Local" ColumnName="Playground__Local" />
+                <ScalarProperty Name="Public_Art" ColumnName="Public_Art" />
+                <ScalarProperty Name="Shelter" ColumnName="Shelter" />
+                <ScalarProperty Name="Shelter__Group" ColumnName="Shelter__Group" />
+                <ScalarProperty Name="Skate_Park" ColumnName="Skate_Park" />
+                <ScalarProperty Name="Sledding_Hill" ColumnName="Sledding_Hill" />
+                <ScalarProperty Name="Structure" ColumnName="Structure" />
+                <ScalarProperty Name="Tennis" ColumnName="Tennis" />
+                <ScalarProperty Name="Trail__Primitive" ColumnName="Trail__Primitive" />
+                <ScalarProperty Name="Volleyball" ColumnName="Volleyball" />
+                <ScalarProperty Name="Water_Access__Developed" ColumnName="Water_Access__Developed" />
+                <ScalarProperty Name="Water_Access__General" ColumnName="Water_Access__General" />
+                <ScalarProperty Name="Water_Feature" ColumnName="Water_Feature" />
+                <ScalarProperty Name="Location_1" ColumnName="Location_1" />
+                <ScalarProperty Name="FID" ColumnName="FID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
